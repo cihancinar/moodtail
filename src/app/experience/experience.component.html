@@ -1,9 +1,9 @@
 <div class="container mx-auto p-4">
-    <h2 class="text-2xl font-bold mb-4">Experience Page</h2>
-    
+    <h2 class="text-2xl font-bold mb-4">Sensory Cocktail</h2>
+
     <form (ngSubmit)="onSubmit()" novalidate>
 
-        <label for="sexe">Sexe</label>
+        <label for="sexe">Gender</label>
         <select id="sexe" name="sexe" class="block w-full mt-2" [(ngModel)]="formData.sexe">
             <option value=""></option>
             <option value="woman">Woman</option>
@@ -49,6 +49,7 @@
             </label>
         </div>
 
-        <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+        <button type="submit"
+            class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Engage the senses</button>
     </form>
 </div>
