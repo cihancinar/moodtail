@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-experience-result',
   templateUrl: './experience-result.component.html',
   styleUrls: ['./experience-result.component.scss']
 })
-export class ExperienceResultComponent {
+export class ExperienceResultComponent implements OnInit {
   images = [
     "Dynamo Twist",
     "Fearless Fizz",
@@ -17,9 +17,21 @@ export class ExperienceResultComponent {
   ]
 
   selectedImages: any;
+  isLoading = true;
 
   constructor() {
     this.getRandomImages(this.images);
+  }
+
+  ngOnInit(): void {
+    this.isLoading = true;
+    setTimeout(() => {
+      this.changeBooleanState();
+    }, 1500);
+  }
+
+  private changeBooleanState() {
+    this.isLoading = false;
   }
 
   getRandomImages(images: any) {
