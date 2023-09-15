@@ -36,7 +36,7 @@ export class ExperienceResultComponent implements OnInit {
   }
   
   onSelect() {
-    this.confirmBoxEvokeService.success('Your moodtail has been sent to the bartender!', 'Please go to the bottom of the page to try to win a new coctail.!', 'Close', '')
+    this.confirmBoxEvokeService.success('Your moodtail has been sent to the bartender!', 'Please go to the bottom of the page to try to win a new cocktail!', 'Close', '')
             .subscribe(resp => console.log('resp', resp));
   }
 
