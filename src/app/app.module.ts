@@ -8,6 +8,12 @@ import { ExperienceComponent } from './experience/experience.component';
 import { ExperienceResultComponent } from './experience-result/experience-result.component';
 import { FormsModule } from '@angular/forms';
 import { NotifierModule } from 'angular-notifier';
+import {
+  NgxAwesomePopupModule,
+  DialogConfigModule,
+  ConfirmBoxConfigModule,
+  ToastNotificationConfigModule
+} from '@costlydeveloper/ngx-awesome-popup';
 
 @NgModule({
   declarations: [
@@ -20,7 +26,11 @@ import { NotifierModule } from 'angular-notifier';
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    NotifierModule
+    NotifierModule,
+    NgxAwesomePopupModule.forRoot(),
+    DialogConfigModule.forRoot(),
+    ConfirmBoxConfigModule.forRoot(),
+    ToastNotificationConfigModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

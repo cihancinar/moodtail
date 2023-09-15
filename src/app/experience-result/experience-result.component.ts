@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ConfirmBoxEvokeService } from '@costlydeveloper/ngx-awesome-popup';
 
 @Component({
   selector: 'app-experience-result',
@@ -19,7 +20,7 @@ export class ExperienceResultComponent implements OnInit {
   selectedImages: any;
   isLoading = true;
 
-  constructor() {
+  constructor(private confirmBoxEvokeService: ConfirmBoxEvokeService) {
     this.getRandomImages(this.images);
   }
 
@@ -32,6 +33,11 @@ export class ExperienceResultComponent implements OnInit {
 
   private changeBooleanState() {
     this.isLoading = false;
+  }
+  
+  onSelect() {
+    this.confirmBoxEvokeService.success('Your moodtail has been sent to the bartender!', 'Please go to the bottom of the page to try to win a new coctail.!', 'Close', '')
+            .subscribe(resp => console.log('resp', resp));
   }
 
   getRandomImages(images: any) {
