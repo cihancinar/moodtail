@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NotifierService } from 'angular-notifier';
 
 @Component({
   selector: 'app-experience-result',
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./experience-result.component.scss']
 })
 export class ExperienceResultComponent {
+  constructor(private notifierService: NotifierService) {
+  }
 
+  onSelect() {
+    
+  }
 }
